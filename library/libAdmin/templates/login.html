@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body  style="color: #8B4513">
+	<div class="col-xs-12 col-md-4 col-md-offset-4">
+		<div class="well well-lg" style="background-color: rgba(0, 0, 0, 0.7);margin-top: 20%;" >
+<form method="POST" action="/libAdmin/" >
+	<div class="text-center">
+	{%csrf_token%}
+	<label>User Name</label><br>
+	{{form.username}}<br><br>
+	<label>Password</label><br>
+	{{form.password}}<br><br>
+	<input type="submit" name="submit" value="Signup" style="color: #000"> 
+		</div>
+</form>	
+</div>
+</div>
+</body>
+</html>

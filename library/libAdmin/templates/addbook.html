@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Book</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body> 
+    <div class="well well-lg" >
+    <form action="/libAdmin/addbook" method="post">
+    {% csrf_token %}
+    <label>Book name Name</label>
+	{{form.book_name}}<br><br>
+	<label>Author</label>
+	{{form.author}}<br><br>
+	<label>Price</label>
+	{{form.price}}<br><br>
+    {{form.avail.as_hidden}}
+    <input type="submit" value="Submit">
+    </form>
+    </div>
+</body>
+</html>

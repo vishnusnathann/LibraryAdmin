@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+</head>
+<body>
+	
+<form action="/libAdmin/edit_book/{{ book_id }}" method="post">
+	{% csrf_token %}
+	<div class="well well-lg">
+		    {{form}}
+     <button class="btn btn-success text-right" type="submit">Edit</button>
+	</div>
+
+</form>
+</body>
+</html>
